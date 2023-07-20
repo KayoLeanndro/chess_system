@@ -4,7 +4,6 @@ import chess.ChessException;
 import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.ChessPosition;
-
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -33,10 +32,10 @@ public class Program {
 				System.out.println();
 				System.out.print("Target: ");
 				ChessPosition target = Ui.readChessPosition(sc);
-				
+
 				ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
 
-				if(capturedPiece != null){
+				if (capturedPiece != null) {
 					captured.add(capturedPiece);
 				}
 
@@ -47,6 +46,7 @@ public class Program {
 				System.out.println(e.getMessage());
 				sc.nextLine();
 			}
+
 		}
 
 	}
